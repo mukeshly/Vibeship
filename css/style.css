@@ -874,8 +874,34 @@ p {
     font-size: 24px; } }
 
 
-   /* CSS to right-align <p> content */
-.item.d-flex.align-items-center .text p {
-  text-align: right; /* Aligns the text to the right */
-  margin: 0; /* Removes any default margin */
+  
+
+@media (max-width: 768px) {
+  .row .col-lg-5 .social-icon {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
 }
+
+/* Services Section Responsive */
+@media (max-width: 768px) {
+  .services-ds .item .text .d-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start; /* text stays left */
+  }
+  .services-ds .item .text p {
+    flex: 1;
+    text-align: left;
+    margin: 0; /* optional: reset any weird paragraph margin */
+  }
+  .services-ds .icon.invert {
+    margin-left: 16px; /* gap between text and icon */
+  }
+}
+
+
+
